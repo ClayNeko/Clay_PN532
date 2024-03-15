@@ -11,12 +11,11 @@ class Clay_PN532_I2C
 private:
     esp_err_t err;
     i2c_config_t i2ccfg;
-    i2c_cmd_handle_t cmd_haldle;
 public:
     esp_err_t init();
     int wake();
     esp_err_t write(const uint8_t* data, size_t datasize);
-    uint8_t* read();
+    uint8_t read();
 };
 
 #endif
